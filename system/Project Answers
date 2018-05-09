@@ -1,0 +1,8 @@
+Patrick Foltyn
+Operating Systems Project
+
+1.) Processes 1, 3, and 7 run first due to having the higher priority. Afterwards processes 4 and 10 will run. The reason the text is jumbled is because of context switches. This will cause on process to run, stop, have another process run, have that one stop, and then finish the process(s) that have not been finished. 
+
+2.) For first in first out you would need to change how the processes were inserted into the queue. We do this by modifying the insert() process. In insert you are placing the process based in the process' key. We modify this key decrementing a very large number each time a process is placed in the queue. This will automatcially cause the largest key to be placed first, decrement the key value, and then place the next process based on a smaller key in the queue. 
+
+3.) To change the memory allocation to worst fit you need to declare a largest variable to the first node in the memory list. You will loop until the current block of memory is null. In this loop you will check if the length of the largest block is smaller than the current block. If it is then you set the largest block to the current block. You will keep code the same for if the block is an exact match and for splitting the big blocks. You will need to return an error if the length of the current block is smaller than block requested. 
